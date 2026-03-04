@@ -1,83 +1,202 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  overflow: hidden;
+/* ---------------- GLOBAL ---------------- */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-.container {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
+:root{
+  --primary:#2EA3E6;
+  --primary-dark:#1B7CB8;
 }
 
-.left{
+body{
+  font-family:"Segoe UI",system-ui,sans-serif;
+  line-height:1.5;
+}
+
+/* ---------------- HEADER ---------------- */
+
+.header{
+  background:aliceblue;
+}
+
+.navbar{
+  max-width:1200px;
+  margin:auto;
+  height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 20px;
+  position:relative;
+}
+
+/* logo */
+
+.logo{
+  font-size:1.4rem;
+  font-weight:600;
+}
+
+/* nav links */
+
+.nav-links{
+  display:flex;
+  list-style:none;
+  gap:30px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:black;
+  font-size:1rem;
+  transition:color .3s;
+}
+
+.nav-links a:hover{
+  color:var(--primary);
+}
+
+/* user badge */
+
+.user p{
+  background:var(--primary);
+  color:white;
+  padding:8px 14px;
+  border-radius:8px;
+  font-size:0.9rem;
+}
+
+/* hamburger */
+
+#menu-toggle{
+  display:none;
+}
+
+.hamburger{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* ---------------- HERO ---------------- */
+
+.hero{
+  max-width:1200px;
+  margin:auto;
+  min-height:calc(100vh - 70px);
+  display:flex;
+  align-items:center;
+  gap:40px;
+  padding:40px 20px;
+}
+
+.hero-text{
+  flex:2;
+}
+
+.hero-image{
+  flex:1;
+  display:flex;
+  justify-content:center;
+}
+
+.hero-image img{
+  width:100%;
+  max-width:400px;
+}
+
+.hero-text h1{
+  font-size:2.8rem;
+}
+
+.highlight{
+  color:var(--primary);
+}
+
+.hero-text p{
+  margin-top:20px;
+  max-width:500px;
+}
+
+.hero-text button{
+  margin-top:30px;
+  padding:14px 24px;
+  border:none;
+  border-radius:8px;
+  background:var(--primary);
+  color:white;
+  font-size:1rem;
+  cursor:pointer;
+  transition: .3s;
+}
+
+.hero-text button:hover{
+  background:var(--primary-dark);
+}
+
+/* ---------------- TABLET ---------------- */
+
+@media (max-width:1024px){
+
+.hero-text{
+  flex:2;
+}
+
+.hero-image{
   flex:1;
 }
 
-
-.left img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.hero-text h1{
+  font-size:2.2rem;
 }
 
-.right {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width:768px){
+
+.hero{
+  flex-direction:column;
+  text-align:center;
+}
+
+.hero-text{
+  flex:none;
+}
+
+.hero-image{
+  flex:none;
+}
+
+/* navbar */
+
+.hamburger{
+  display:block;
+}
+
+.nav-links{
+  position:absolute;
+  top:70px;
+  left:0;
+  width:100%;
+  background:white;
+  flex-direction:column;
   align-items:center;
-  background-color: #dfeffd;
+  gap:20px;
+  padding:20px 0;
+  display:none;
 }
 
-.right h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
+#menu-toggle:checked ~ .nav-links{
+  display:flex;
 }
 
-.right p {
-  margin-bottom: 40px;
+.user{
+  display:none;
 }
 
-.login {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 350px;
-}
-
-.login label {
-  font-size: 14px;
-  margin: 8px 0px;
-}
-
-.login input{
-  padding: 12px 15px;
-  margin-bottom: 20px;
-  border: 1px solid #dcdfe3;
-  border-radius: 8px;
-  font-size: 14px;
-}
-
-.login input::placeholder{
-  color: rgb(208, 206, 206);
-}
-
-.login a {
-  font-size: 13px;
-  color: #1e9be9;
-  text-decoration: none;
-  margin: 10px 0px;
-  align-self: flex-end;
-}
-
-.sbmt {
-  padding: 14px;
-  background-color: #1e9be9;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  font-size: 15px;
-  cursor: pointer;
 }

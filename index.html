@@ -1,31 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css">
-    <title>Laundry Mart</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="left">
-      <img
-        src="https://i.pinimg.com/736x/e4/b1/ae/e4b1ae6126d895d00b238ad673d02019.jpg"
-        alt="Laundry image"
-      />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laundry Mart</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="header">
+
+  <nav class="navbar">
+
+    <div class="logo">
+      <h4>Laundry Mart</h4>
     </div>
-    <div class="right">
-      <h1>Hello Again!</h1>
-      <p>Welcome back, you've been missed!</p>
-      <form action="" class="login">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" required placeholder="abc@example.com">
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" required placeholder="Password">
-        <a href="#">Forgot Password?</a>
-        <input type="submit" value="Login" class="sbmt">
-      </form>
+
+    <input type="checkbox" id="menu-toggle">
+
+    <label for="menu-toggle" class="hamburger">
+      ☰
+    </label>
+
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="user">
+      <p>Username</p>
     </div>
-    </div>
-  </body>
+
+  </nav>
+
+</header>
+
+
+<main>
+
+<section class="hero">
+
+  <div class="hero-text">
+
+    <h1>Revitalizing your clothes with expert</h1>
+    <h1 class="highlight">Laundry Services!</h1>
+
+    <p>
+      From premium dry cleaning to swift wash and fold,
+      we deliver care and convenience. Schedule a pickup
+      and rediscover the freshness of your clothes today.
+    </p>
+
+    <button>Book a service today</button>
+
+  </div>
+
+  <div class="hero-image">
+
+    <img
+      src="https://static.vecteezy.com/system/resources/thumbnails/026/721/193/small/washing-machine-and-laundry-laundry-sticker-png.png"
+      alt="Laundry illustration"
+    >
+
+  </div>
+
+</section>
+
+</main>
+
+</body>
 </html>
