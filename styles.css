@@ -11,9 +11,8 @@
   height: 100vh;
 }
 
-.left,
-.right {
-  flex: 1;
+.left{
+  flex:1;
 }
 
 
@@ -23,30 +22,21 @@
   object-fit: cover;
 }
 
-
-.right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .right {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px;
+  align-items:center;
   background-color: #dfeffd;
 }
 
 .right h1 {
   font-size: 36px;
-  color: #2c3e50;
   margin-bottom: 10px;
 }
 
 .right p {
-  color: #7a8a99;
   margin-bottom: 40px;
 }
 
@@ -59,29 +49,26 @@
 
 .login label {
   font-size: 14px;
-  margin-bottom: 8px;
-  color: #4f5d6a;
+  margin: 8px 0px;
 }
 
-.login input[type="text"] {
+.login input{
   padding: 12px 15px;
   margin-bottom: 20px;
   border: 1px solid #dcdfe3;
   border-radius: 8px;
   font-size: 14px;
-  outline: none;
-  transition: 0.3s ease;
 }
 
-.login input[type="text"]:focus {
-  border-color: #1e9be9;
+.login input::placeholder{
+  color: rgb(208, 206, 206);
 }
 
 .login a {
   font-size: 13px;
   color: #1e9be9;
   text-decoration: none;
-  margin-bottom: 25px;
+  margin: 10px 0px;
   align-self: flex-end;
 }
 
@@ -93,9 +80,4 @@
   color: white;
   font-size: 15px;
   cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.sbmt:hover {
-  background-color: #1687cc;
 }
