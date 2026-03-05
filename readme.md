@@ -26,3 +26,6 @@ also when toggled hamburger icon changes color to white with similar pseudoselec
 
 transform and transition properties are used to scale and rotate the button on hover.
 
+two animations are implemented 
+one: rotateBounceSqueeze for the image div
+second: btnMover for animating the button movement, on hover the animation is set to none.

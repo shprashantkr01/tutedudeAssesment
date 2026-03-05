@@ -161,6 +161,8 @@ body{
   flex:1;
   display:flex;
   justify-content:center;
+  animation: rotateBounceSqueeze 2s ease-in-out infinite;
+  animation-delay: 1s;
 }
 
 .hero-image img{
@@ -191,9 +193,11 @@ body{
   font-size:1rem;
   cursor:pointer;
   transition:.8s;
+  animation: btnMover 3s ease 1s infinite;
 }
 
 .hero-text button:hover{
+  animation: none;
   transform: scale(1.2) rotate(-5deg);
   transition: ease-in-out .8s;
 }
@@ -255,4 +259,57 @@ body{
   display:none;
 }
 
+}
+
+
+/*  animations  */
+
+@keyframes rotateBounceSqueeze {
+
+
+  0%{
+    transform: translate(0,0) scale(1);
+  }
+
+  20%{
+    transform: translate(10%,0) scale(1.1);
+  }
+
+  40%{
+    transform: translate(10%,10%) scale(1.1);
+  }
+
+  60%{
+    transform: translate(0,10%) scale(1);
+  }
+
+  70%{
+    transform: scaleX(1.2) scaleY(0.8);
+  }
+
+  80%{
+    transform: scaleX(0.9) scaleY(1.1);
+  }
+
+  /* back to normal */
+
+  85%{
+    transform: scale(1);
+  }
+
+  /* pause happens here */
+
+  100%{
+    transform: scale(1);
+  }
+
+}
+
+@keyframes btnMover {
+  0%,100%{
+    transform: rotate(-5deg);
+  }
+  50%{
+    transform: rotate(5deg);
+  }
 }
