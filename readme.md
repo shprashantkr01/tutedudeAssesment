@@ -13,7 +13,13 @@ the hamburger menu is created using a hidden checkbox techniques that i learned 
 
 first a checkbox was added along with hamburger setting its display to hidden.
 then using pseudo selector
-#menu-toggle:checked ~ .nav-links{
-  display:flex;
+#menu-toggle:checked ~ .sidebar{
+  transform:translateX(0);
 }
 to toggle hamburger menu on and off when checked. 
+initially the sidebar remains out of the viewport window, when toggled on it comes into viewport because of the translate property used.
+also when toggled hamburger icon changes color to white with similar pseudoselector
+
+#menu-toggle:checked ~ .hamburger{
+  color:white;
+}
