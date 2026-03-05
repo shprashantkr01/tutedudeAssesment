@@ -23,3 +23,6 @@ also when toggled hamburger icon changes color to white with similar pseudoselec
 #menu-toggle:checked ~ .hamburger{
   color:white;
 }
+
+transform and transition properties are used to scale and rotate the button on hover.
+

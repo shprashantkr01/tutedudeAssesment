@@ -190,11 +190,12 @@ body{
   color:white;
   font-size:1rem;
   cursor:pointer;
-  transition:.3s;
+  transition:.8s;
 }
 
 .hero-text button:hover{
-  background:var(--primary-dark);
+  transform: scale(1.2) rotate(-5deg);
+  transition: ease-in-out .8s;
 }
 
 
